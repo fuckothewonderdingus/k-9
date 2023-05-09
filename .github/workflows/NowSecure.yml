@@ -56,11 +56,11 @@ jobs:
         name: NowSecure upload app
         uses: nowsecure/nowsecure-action/upload-app@v3
         with:
-          platform_token: ${{ secrets.NS_TOKEN }}
+          platform_token: ${{ secrets.NSTOKEN }}
           # TODO: Replace application path.
           app_file:  "k9mail-debug.apk"	
           # TODO: Replace the Group ID.
-          group_id: "602abed9-4c66-453d-8431-da0195b682de"	  
+          group_id: "5d0cc76e-7309-11e7-86d0-7bac1d886ca4"	  
   process:
     if: ${{ needs.scan.outputs.report_id }}
     runs-on: ubuntu-latest
@@ -77,9 +77,9 @@ jobs:
         timeout-minutes: 30
         with:
           report_id: ${{ needs.scan.outputs.report_id }}
-          platform_token: ${{ secrets.NS_TOKEN }}
+          platform_token: ${{ secrets.NSTOKEN }}
           # TODO: Replace the Group ID.
-          group_id: "602abed9-4c66-453d-8431-da0195b682de"
+          group_id: "5d0cc76e-7309-11e7-86d0-7bac1d886ca4"
           
       - name: Save SARIF File
         uses: actions/upload-artifact@v2
