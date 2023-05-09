@@ -20,9 +20,9 @@ jobs:
         id: getreport
         with:
           report_id: 8c7fdf66-b63f-11ed-ac54-d765fca77473
-          platform_token: ${{ secrets.NS_TOKEN }}
+          platform_token: ${{ secrets.NSTOKEN }}
           # TODO: Replace the Group ID.
-          group_id: "602abed9-4c66-453d-8431-da0195b682de"
+          group_id: "5d0cc76e-7309-11e7-86d0-7bac1d886ca4"
   
       - name: echo output
         run: |
